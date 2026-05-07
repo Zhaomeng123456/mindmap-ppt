@@ -328,6 +328,9 @@ function createNodeElement(node) {
   group.classList.add("mind-node", "entering");
   group.setAttribute("tabindex", "-1");
 
+  const content = document.createElementNS(SVG_NS, "g");
+  content.classList.add("node-content");
+
   const rect = document.createElementNS(SVG_NS, "rect");
   rect.setAttribute("x", String(-layout.nodeWidth / 2));
   rect.setAttribute("y", String(-layout.nodeHeight / 2));
@@ -340,8 +343,9 @@ function createNodeElement(node) {
   text.setAttribute("dominant-baseline", "middle");
   text.textContent = node.label;
 
-  group.append(rect, text);
-  requestAnimationFrame(() => group.classList.remove("entering"));
+  content.append(rect, text);
+  group.append(content);
+  window.setTimeout(() => group.classList.remove("entering"), 1240);
 
   return { group, label: text };
 }
@@ -364,9 +368,10 @@ function syncLinks(links) {
     if (!path) {
       path = document.createElementNS(SVG_NS, "path");
       path.classList.add("mind-link", "entering");
+      path.setAttribute("pathLength", "1");
       renderedLinks.set(link.id, path);
       svg.insertBefore(path, svg.firstChild);
-      requestAnimationFrame(() => path.classList.remove("entering"));
+      window.setTimeout(() => path.classList.remove("entering"), 980);
     }
 
     path.classList.toggle("path-link", link.isPathLink);
