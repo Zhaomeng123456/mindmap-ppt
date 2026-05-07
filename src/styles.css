@@ -1,0 +1,226 @@
+:root {
+  color: #172033;
+  background: #f7f6f0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(120deg, rgba(21, 116, 103, 0.08), transparent 36%),
+    linear-gradient(245deg, rgba(207, 92, 54, 0.1), transparent 42%),
+    #f7f6f0;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(1560px, 100vw);
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 18px;
+}
+
+.stage-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+  padding: 0 4px;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #6b745d;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #182033;
+  font-size: clamp(1.6rem, 2.4vw, 2.7rem);
+  line-height: 1.04;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(31, 52, 56, 0.18);
+  border-radius: 8px;
+  color: #1b3236;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 24px rgba(39, 51, 44, 0.08);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    opacity 180ms ease;
+}
+
+.icon-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #ffffff;
+}
+
+.icon-button:disabled {
+  opacity: 0.34;
+  cursor: default;
+}
+
+.counter {
+  min-width: 72px;
+  color: #515d66;
+  font-size: 0.94rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.presentation-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  border: 1px solid rgba(45, 55, 72, 0.12);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 28px 28px, rgba(28, 58, 65, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(249, 248, 241, 0.92));
+  background-size: 28px 28px, auto;
+  box-shadow: 0 22px 70px rgba(36, 45, 48, 0.14);
+}
+
+#mindmap {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.mind-node {
+  opacity: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
+}
+
+.mind-node.entering {
+  opacity: 0;
+}
+
+.mind-node.leaving {
+  opacity: 0;
+}
+
+.mind-node rect {
+  fill: #ffffff;
+  stroke: rgba(26, 42, 49, 0.18);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 10px 18px rgba(24, 38, 44, 0.11));
+  transition:
+    fill 260ms ease,
+    stroke 260ms ease,
+    stroke-width 260ms ease;
+}
+
+.mind-node text {
+  fill: #172033;
+  font-size: 16px;
+  font-weight: 800;
+  pointer-events: none;
+}
+
+.mind-node.path-node rect {
+  fill: #fffdf8;
+  stroke: rgba(38, 77, 92, 0.34);
+}
+
+.mind-node.complete-node rect {
+  fill: #eef7f3;
+  stroke: rgba(37, 126, 103, 0.35);
+}
+
+.mind-node.active rect {
+  fill: #183a4a;
+  stroke: #d8894f;
+  stroke-width: 3;
+}
+
+.mind-node.active text {
+  fill: #ffffff;
+}
+
+.mind-link {
+  fill: none;
+  stroke: rgba(42, 55, 68, 0.3);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 1;
+  transition:
+    d 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease,
+    stroke 240ms ease,
+    stroke-width 240ms ease;
+}
+
+.mind-link.entering,
+.mind-link.leaving {
+  opacity: 0;
+}
+
+.mind-link.path-link {
+  stroke: rgba(24, 58, 74, 0.74);
+  stroke-width: 4;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .stage-topbar {
+    align-items: flex-start;
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  .counter {
+    display: none;
+  }
+
+  #mindmap {
+    min-height: calc(100vh - 112px);
+  }
+}

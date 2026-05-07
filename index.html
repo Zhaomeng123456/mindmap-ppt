@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindmap PPT Demo</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage-topbar" aria-label="Presentation controls">
+        <div>
+          <p class="eyebrow">Markdown Mindmap</p>
+          <h1>思维导图演示</h1>
+        </div>
+        <div class="controls">
+          <button class="icon-button" id="prevButton" type="button" aria-label="上一个节点" title="上一个节点">
+            <span aria-hidden="true">↑</span>
+          </button>
+          <button class="icon-button" id="nextButton" type="button" aria-label="下一个节点" title="下一个节点">
+            <span aria-hidden="true">↓</span>
+          </button>
+          <span class="counter" id="counter">1 / 1</span>
+        </div>
+      </section>
+
+      <section class="presentation-frame">
+        <svg id="mindmap" role="img" aria-label="Animated mindmap presentation"></svg>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
