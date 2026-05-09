@@ -56,6 +56,9 @@ h1 {
 }
 
 .control-main {
+  --slider-readout-gap: 14px;
+  --slider-readout-width: 72px;
+  --zoom-control-pad-x: 12px;
   display: grid;
   grid-template-rows: 34px auto;
   gap: 8px;
@@ -63,9 +66,9 @@ h1 {
 
 .node-scrubber {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 72px;
+  grid-template-columns: minmax(0, 1fr) var(--slider-readout-width);
   align-items: center;
-  gap: 14px;
+  gap: var(--slider-readout-gap);
   min-width: 0;
   height: 34px;
 }
@@ -171,7 +174,8 @@ h1 {
 }
 
 .counter {
-  min-width: 72px;
+  min-width: var(--slider-readout-width);
+  padding-right: var(--zoom-control-pad-x);
   color: #515d66;
   font-size: 0.94rem;
   font-weight: 800;
@@ -208,19 +212,29 @@ h1 {
   display: grid;
   flex: 0 0 56px;
   place-items: center;
-  gap: 2px;
   padding: 10px 0;
   border-right: 1px solid rgba(24, 58, 74, 0.08);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(247, 248, 245, 0.16));
 }
 
-.readout-icon span {
+.letter-grid {
+  --letter-grid-size: 34px;
+  --letter-grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  place-items: center;
+  width: var(--letter-grid-size);
+  height: var(--letter-grid-size);
+  gap: var(--letter-grid-gap);
   color: #7d8775;
+}
+
+.letter-grid span {
   font-size: 0.7rem;
   font-weight: 900;
   line-height: 1;
-  letter-spacing: 0.12em;
-  white-space: pre;
+  letter-spacing: 0;
 }
 
 .readout-card .node-content {
@@ -255,31 +269,18 @@ h1 {
 
 .zoom-control {
   display: grid;
-  grid-template-columns: 24px minmax(72px, 1fr) minmax(4.5ch, max-content);
+  grid-template-columns: 32px minmax(72px, 1fr) minmax(4.5ch, calc(var(--slider-readout-width) - var(--zoom-control-pad-x)));
   align-items: center;
-  gap: 8px;
+  gap: var(--slider-readout-gap);
   min-height: 68px;
-  padding: 0 12px;
+  padding: 0 var(--zoom-control-pad-x);
 }
 
 .zoom-icon {
-  display: inline-grid;
+  display: grid;
+  align-self: stretch;
+  justify-self: center;
   place-items: center;
-  width: 24px;
-  height: 24px;
-  color: #6b745d;
-}
-
-.zoom-icon svg {
-  display: block;
-  width: 20px;
-  height: 20px;
-  overflow: visible;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .zoom-control input {
@@ -898,9 +899,10 @@ h1 {
     min-width: 0;
   }
 
-  .node-scrubber {
-    grid-template-columns: minmax(0, 1fr) 58px;
-    gap: 10px;
+  .control-main {
+    --slider-readout-gap: 10px;
+    --slider-readout-width: 58px;
+    --zoom-control-pad-x: 10px;
   }
 
   .node-readout {
