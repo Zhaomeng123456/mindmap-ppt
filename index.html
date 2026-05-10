@@ -43,7 +43,7 @@
                     <span class="node-title" id="nextNodeTitle">root</span>
                   </div>
                 </div>
-                <label class="zoom-control" for="zoomSlider">
+                <div class="zoom-control" aria-label="缩放设置">
                   <span class="zoom-icon" aria-hidden="true">
                     <span class="letter-grid">
                       <span>Z</span>
@@ -52,18 +52,27 @@
                       <span>M</span>
                     </span>
                   </span>
-                  <input id="zoomSlider" type="range" min="70" max="140" value="100" aria-label="调整相机远近" />
-                  <strong id="zoomValue">100%</strong>
-                </label>
+                  <div class="zoom-fields">
+                    <label class="zoom-row" for="zoomSlider">
+                      <input id="zoomSlider" type="range" min="70" max="140" value="100" aria-label="调整整体大小" />
+                      <strong id="zoomValue">100%</strong>
+                    </label>
+                    <label class="zoom-row" for="activeScaleSlider">
+                      <input
+                        id="activeScaleSlider"
+                        type="range"
+                        min="100"
+                        max="200"
+                        step="5"
+                        value="150"
+                        aria-label="调整选中节点放大倍率"
+                      />
+                      <strong id="activeScaleValue">1.50x</strong>
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="step-buttons">
-              <button class="icon-button" id="prevButton" type="button" aria-label="上一个节点" title="上一个节点">
-                <span aria-hidden="true">↑</span>
-              </button>
-              <button class="icon-button" id="nextButton" type="button" aria-label="下一个节点" title="下一个节点">
-                <span aria-hidden="true">↓</span>
-              </button>
+              <p class="control-hint">翻页：↑ ↓、Page Up / Page Down 或滚轮</p>
             </div>
           </div>
         </section>

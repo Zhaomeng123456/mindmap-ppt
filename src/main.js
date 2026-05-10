@@ -7,11 +7,11 @@ const nodeLayer = document.querySelector("#nodeLayer");
 const deckSubtitle = document.querySelector("#deckSubtitle");
 const deckTitle = document.querySelector("#deckTitle");
 const counter = document.querySelector("#counter");
-const prevButton = document.querySelector("#prevButton");
-const nextButton = document.querySelector("#nextButton");
 const nodeSlider = document.querySelector("#nodeSlider");
 const zoomSlider = document.querySelector("#zoomSlider");
 const zoomValue = document.querySelector("#zoomValue");
+const activeScaleSlider = document.querySelector("#activeScaleSlider");
+const activeScaleValue = document.querySelector("#activeScaleValue");
 const nextNodePreview = document.querySelector("#nextNodePreview");
 const nextNodeSubtitle = document.querySelector("#nextNodeSubtitle");
 const nextNodeTitle = document.querySelector("#nextNodeTitle");
@@ -42,6 +42,7 @@ let renderedLinks = new Map();
 let cameraTargetIndex = null;
 let currentNodeMetrics = new Map();
 let cameraZoom = Number(zoomSlider.value) / 100;
+let activeScale = Number(activeScaleSlider.value) / 100;
 let wheelDeltaBuffer = 0;
 let wheelNavigationTimer = null;
 
@@ -51,13 +52,15 @@ idToNode = new Map(preorder.map((node) => [node.id, node]));
 nodeSlider.max = String(preorder.length);
 updateDeckHeading(root.label);
 
-prevButton.addEventListener("click", () => setActiveIndex(activeIndex - 1));
-nextButton.addEventListener("click", () => setActiveIndex(activeIndex + 1));
 nodeSlider.addEventListener("input", (event) => {
   setActiveIndex(Number(event.target.value));
 });
 zoomSlider.addEventListener("input", (event) => {
   cameraZoom = Number(event.target.value) / 100;
+  render();
+});
+activeScaleSlider.addEventListener("input", (event) => {
+  activeScale = Number(event.target.value) / 100;
   render();
 });
 window.addEventListener("keydown", handleKeydown);
@@ -829,11 +832,12 @@ function updateControls() {
   nodeSlider.style.setProperty("--slider-progress", `${sliderProgress}%`);
   zoomSlider.value = String(Math.round(cameraZoom * 100));
   zoomValue.textContent = `${Math.round(cameraZoom * 100)}%`;
+  activeScaleSlider.value = String(Math.round(activeScale * 100));
+  activeScaleValue.textContent = `${activeScale.toFixed(2)}x`;
+  nodeLayer.style.setProperty("--active-node-scale", activeScale.toFixed(2));
   nextNodePreview.classList.toggle("has-subtitle", label.hasSubtitle);
   nextNodeSubtitle.textContent = label.subtitle;
   nextNodeTitle.textContent = label.title;
-  prevButton.disabled = activeIndex === 0;
-  nextButton.disabled = isEnd;
 }
 
 function getNextStepLabel(nextNode, isEnd) {
