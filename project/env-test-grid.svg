@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <!-- chamber background -->
+  <rect x="60" y="200" width="1160" height="400" rx="12" fill="#f3efe9" stroke="none"/>
+  <!-- 5 test chambers, size proportional to test duration -->
+  <!-- 1. High-temp working 27h -->
+  <rect x="100" y="340" width="160" height="200" rx="6" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <rect x="100" y="340" width="160" height="40" rx="6" fill="#183a4a" opacity="0.15"/>
+  <!-- thermometer -->
+  <rect x="168" y="390" width="8" height="60" rx="4" fill="#d8894f" opacity="0.5"/>
+  <circle cx="172" cy="455" r="14" fill="none" stroke="#d8894f" stroke-width="2" opacity="0.6"/>
+  <line x1="160" y1="400" x2="160" y2="420" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+  <line x1="184" y1="410" x2="184" y2="435" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- 2. Thermal non-op cycling 18h -->
+  <rect x="290" y="380" width="150" height="160" rx="6" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <rect x="290" y="380" width="150" height="35" rx="6" fill="#183a4a" opacity="0.12"/>
+  <!-- cycle arrows -->
+  <path d="M345,430 Q370,440 345,460 Q320,450 345,430" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.5"/>
+  <path d="M365,420 Q385,410 365,400" fill="none" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- 3. EMC 72h (largest, emphasized) -->
+  <rect x="470" y="260" width="220" height="340" rx="8" fill="#fffdf8" stroke="#d8894f" stroke-width="2.5"/>
+  <rect x="470" y="260" width="208" height="45" rx="6" fill="#d8894f" opacity="0.15"/>
+  <!-- EMC wave arcs -->
+  <path d="M510,400 Q540,370 560,400" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.5"/>
+  <path d="M530,430 Q560,400 580,430" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.4"/>
+  <path d="M550,460 Q580,430 600,460" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <!-- shield outline -->
+  <path d="M540,500 L580,510 L620,500 L620,540 Q580,560 540,540 Z" fill="none" stroke="#d8894f" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- 4. Drop test 2h (smallest) -->
+  <rect x="720" y="440" width="140" height="120" rx="6" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <rect x="720" y="440" width="140" height="30" rx="6" fill="#183a4a" opacity="0.1"/>
+  <!-- drop arrow -->
+  <rect x="770" y="480" width="24" height="30" rx="3" fill="#183a4a" opacity="0.3"/>
+  <polygon points="765,510 799,510 782,540" fill="#d8894f" opacity="0.5"/>
+  <line x1="772" y1="470" x2="768" y2="480" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+  <line x1="796" y1="470" x2="800" y2="480" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- 5. Vibration test 3h -->
+  <rect x="890" y="420" width="150" height="160" rx="6" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <rect x="890" y="420" width="150" height="30" rx="6" fill="#183a4a" opacity="0.1"/>
+  <!-- vibration waves -->
+  <path d="M920,510 Q940,490 960,510 Q980,530 1000,510" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.5"/>
+  <path d="M925,530 Q945,510 965,530 Q985,550 1005,530" fill="none" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+  <path d="M930,550 Q950,530 970,550" fill="none" stroke="#183a4a" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- external lab indicator on EMC -->
+  <rect x="540" y="280" width="80" height="18" rx="9" fill="#d8894f" opacity="0.3"/>
+
+  <!-- top connecting bar -->
+  <rect x="120" y="240" width="1040" height="4" rx="2" fill="#183a4a" opacity="0.1"/>
+</svg>

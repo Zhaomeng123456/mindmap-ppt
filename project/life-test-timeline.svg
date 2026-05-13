@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <!-- title area decorative line -->
+  <rect x="120" y="120" width="1040" height="2" rx="1" fill="#183a4a" opacity="0.08"/>
+  <!-- accelerated life 189h (small) -->
+  <rect x="140" y="260" width="200" height="200" rx="8" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <rect x="140" y="260" width="200" height="40" rx="8" fill="#183a4a" opacity="0.12"/>
+  <!-- clock icon on small bar -->
+  <circle cx="240" cy="340" r="35" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.4"/>
+  <line x1="240" y1="340" x2="240" y2="325" stroke="#183a4a" stroke-width="2" opacity="0.4"/>
+  <line x1="240" y1="340" x2="255" y2="340" stroke="#183a4a" stroke-width="2" opacity="0.4"/>
+  <!-- 189h label slot -->
+  <rect x="180" y="420" width="120" height="24" rx="4" fill="#183a4a" opacity="0.08"/>
+
+  <!-- huge 1833h switching test -->
+  <rect x="460" y="180" width="680" height="440" rx="10" fill="#fffdf8" stroke="#d8894f" stroke-width="3"/>
+  <rect x="460" y="180" width="680" height="50" rx="10" fill="#d8894f" opacity="0.12"/>
+  <!-- on/off switch pattern repeated -->
+  <rect x="510" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <circle cx="545" cy="295" r="10" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <rect x="590" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <circle cx="625" cy="295" r="10" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <rect x="670" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <circle cx="705" cy="295" r="10" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <rect x="750" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <circle cx="785" cy="295" r="10" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <rect x="830" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <circle cx="865" cy="295" r="10" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <rect x="910" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <circle cx="945" cy="295" r="10" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <rect x="990" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <circle cx="1025" cy="295" r="10" fill="none" stroke="#183a4a" stroke-width="2" opacity="0.3"/>
+  <rect x="1070" y="280" width="30" height="30" rx="3" fill="#183a4a" opacity="0.5"/>
+  <!-- more rows of switches -->
+  <rect x="510" y="350" width="30" height="30" rx="3" fill="#183a4a" opacity="0.35"/>
+  <rect x="590" y="350" width="30" height="30" rx="3" fill="#183a4a" opacity="0.35"/>
+  <rect x="670" y="350" width="30" height="30" rx="3" fill="#183a4a" opacity="0.35"/>
+  <rect x="750" y="350" width="30" height="30" rx="3" fill="#183a4a" opacity="0.35"/>
+  <rect x="830" y="350" width="30" height="30" rx="3" fill="#183a4a" opacity="0.35"/>
+  <rect x="910" y="350" width="30" height="30" rx="3" fill="#183a4a" opacity="0.35"/>
+  <rect x="990" y="350" width="30" height="30" rx="3" fill="#183a4a" opacity="0.35"/>
+  <rect x="510" y="420" width="30" height="30" rx="3" fill="#183a4a" opacity="0.2"/>
+  <rect x="590" y="420" width="30" height="30" rx="3" fill="#183a4a" opacity="0.2"/>
+  <rect x="670" y="420" width="30" height="30" rx="3" fill="#183a4a" opacity="0.2"/>
+  <rect x="750" y="420" width="30" height="30" rx="3" fill="#183a4a" opacity="0.2"/>
+  <rect x="830" y="420" width="30" height="30" rx="3" fill="#183a4a" opacity="0.2"/>
+  <rect x="910" y="420" width="30" height="30" rx="3" fill="#183a4a" opacity="0.2"/>
+  <!-- automation gear -->
+  <circle cx="1060" cy="500" r="25" fill="none" stroke="#d8894f" stroke-width="2" opacity="0.4"/>
+  <circle cx="1060" cy="500" r="10" fill="#d8894f" opacity="0.3"/>
+  <rect x="1040" y="490" width="10" height="4" rx="2" fill="#d8894f" opacity="0.3" transform="rotate(30 1045 492)"/>
+  <rect x="1040" y="490" width="10" height="4" rx="2" fill="#d8894f" opacity="0.3" transform="rotate(90 1045 492)"/>
+  <rect x="1040" y="490" width="10" height="4" rx="2" fill="#d8894f" opacity="0.3" transform="rotate(-30 1045 492)"/>
+
+  <!-- contrast arrow between the two bars -->
+  <polygon points="390,320 430,340 390,360" fill="none" stroke="#d8894f" stroke-width="2" opacity="0.5"/>
+  <rect x="380" y="370" width="120" height="2" rx="1" fill="#d8894f" opacity="0.2"/>
+
+  <!-- 1833h label -->
+  <rect x="700" y="235" width="80" height="20" rx="4" fill="#d8894f" opacity="0.15"/>
+
+  <!-- timeline baseline -->
+  <line x1="120" y1="680" x2="1160" y2="680" stroke="#183a4a" stroke-width="2" opacity="0.12"/>
+</svg>

@@ -23,7 +23,7 @@ const server = createServer((request, response) => {
   const url = new URL(request.url ?? "/", `http://${request.headers.host ?? "localhost"}`);
   const pathname = decodeURIComponent(url.pathname);
   const safePath = normalize(pathname).replace(/^(\.\.[/\\])+/, "");
-  const requestedPath = safePath === "/" ? "/index.html" : safePath;
+  const requestedPath = (safePath === "/" || safePath === "\\") ? "/index.html" : safePath;
   const filePath = resolve(join(rootDir, requestedPath));
 
   if (!filePath.startsWith(rootDir)) {

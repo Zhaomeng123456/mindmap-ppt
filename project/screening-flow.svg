@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <!-- ALL samples entry point -->
+  <rect x="490" y="80" width="300" height="70" rx="10" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <!-- sample dots entering -->
+  <circle cx="530" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="545" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="560" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="575" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="590" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="605" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="620" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="635" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="650" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="665" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+  <circle cx="680" cy="115" r="4" fill="#183a4a" opacity="0.4"/>
+
+  <!-- Stage 1: thermal cycling screening 28h -->
+  <polygon points="490,150 790,150 740,280 540,280" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <rect x="580" y="170" width="140" height="28" rx="6" fill="#183a4a" opacity="0.1"/>
+  <!-- cycle symbol inside -->
+  <path d="M610,230 Q630,220 650,230 Q630,240 610,230" fill="none" stroke="#d8894f" stroke-width="2" opacity="0.4"/>
+  <path d="M640,220 Q660,210 670,220" fill="none" stroke="#d8894f" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Stage 2: high-temp aging 23h -->
+  <polygon points="540,280 740,280 700,400 580,400" fill="#fffdf8" stroke="#d8894f" stroke-width="2.5"/>
+  <rect x="600" y="300" width="120" height="24" rx="6" fill="#d8894f" opacity="0.12"/>
+  <!-- thermometer symbol -->
+  <rect x="633" y="345" width="6" height="30" rx="3" fill="#183a4a" opacity="0.3"/>
+  <circle cx="636" cy="382" r="10" fill="none" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Stage 3: power cycling 50h -->
+  <polygon points="580,400 700,400 670,520 610,520" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <rect x="610" y="420" width="90" height="22" rx="6" fill="#183a4a" opacity="0.08"/>
+  <!-- on/off symbol -->
+  <circle cx="640" cy="465" r="12" fill="none" stroke="#183a4a" stroke-width="1.5" opacity="0.4"/>
+  <line x1="640" y1="475" x2="640" y2="485" stroke="#183a4a" stroke-width="2" opacity="0.4"/>
+
+  <!-- exit arrow -->
+  <polygon points="620,520 660,520 640,580" fill="#eef7f3" stroke="#d8894f" stroke-width="2"/>
+  <rect x="610" y="590" width="60" height="34" rx="17" fill="#d8894f" opacity="0.18" stroke="#183a4a" stroke-width="1.5"/>
+
+  <!-- flow arrows between stages -->
+  <polygon points="640,285 628,285 634,273" fill="#183a4a" opacity="0.3"/>
+  <polygon points="640,405 628,405 634,393" fill="#183a4a" opacity="0.3"/>
+
+  <!-- question mark bubble for merge consideration -->
+  <path d="M760,420 Q790,420 790,435 Q790,450 775,450 L770,460 L765,450 Q750,450 750,435 Q750,420 760,420 Z" fill="none" stroke="#d8894f" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- decorative side elements -->
+  <rect x="540" y="230" width="120" height="3" rx="1.5" fill="#183a4a" opacity="0.06"/>
+  <rect x="580" y="360" width="80" height="3" rx="1.5" fill="#183a4a" opacity="0.06"/>
+  <rect x="590" y="480" width="60" height="3" rx="1.5" fill="#183a4a" opacity="0.06"/>
+</svg>
